@@ -1,4 +1,4 @@
-import ValuesController from "./Controllers/ValuesController.js";
+import ValuesController from "./Controllers/ListController.js";
 
 class App {
   valuesController = new ValuesController();

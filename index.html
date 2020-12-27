@@ -22,7 +22,18 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newModal">New List</button>
 
         <div class="row my-3">
-
+            <div class="card col-md-4">
+                <h5 class="card-header text-center">${this.title}<i type="button" class="fa fa-times btn-danger"
+                        onclick="app.listController.deleteList('$this.id')" aria-hidden="true"></i></h5>
+                <div class="card-body">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="new item" aria-label="Username"
+                            aria-describedby="addon-wrapping">
+                        <button type="button" class="btn btn-primary">+</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
