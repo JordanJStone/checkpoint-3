@@ -1,11 +1,24 @@
 import { ProxyState } from "../AppState.js";
 import List from "../Models/List.js";
+import { saveState } from "../Utils/LocalStorage.js"
 
-class ValuesService {
-  addValue() {
-    ProxyState.values = [...ProxyState.values, new Value({ title: Math.random() })]
+class ListService {
+  deleteList(id) {
+    ProxyState.lists = ProxyState.lists.filter(p => p.id != id)
+    ProxyState.items = ProxyState.items.filter(t => t.listId != id)
+  }
+  createList(rawList) {
+    let list = new List(rawList)
+
+    let lists = ProxyState.lists
+    lists.push(list)
+
+    ProxyState.lists = lists
+  }
+  constructor() {
+    ProxyState.on("lists", saveState)
   }
 }
 
-export const valuesService = new ValuesService();
+export const listService = new ListService();
 

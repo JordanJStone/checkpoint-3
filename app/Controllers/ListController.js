@@ -1,18 +1,12 @@
 import { ProxyState } from "../AppState.js";
-import { valuesService } from "../Services/ListService.js";
+import { listService } from "../Services/ListService.js";
 
 
 //Private
 function _draw() {
-  let values = ProxyState.values;
-  let template = ''
-  values.forEach(v => template += v.Template)
-  document.getElementById("app").innerHTML = /*html*/`
-  <button className="btn btn-info" onclick="app.valuesController.addValue()">Add Value</button>  
-  <div className="card-columns values">
-      ${template}
-  </div>
-  `
+  let template = ""
+  ProxyState.lists.forEach(p => template += p.Template)
+  document.getElementById("lists").innerHTML = template
 }
 
 //Public
@@ -30,13 +24,13 @@ export default class ListController {
     let rawList = {
       title: form.title.value
     }
-
     listService.createList(rawList)
-    form.reset()
+
+    // form.reset()
   }
 
   deleteList(id) {
-    ListService.deleteList(id)
+    listService.deleteList(id)
   }
 
 
