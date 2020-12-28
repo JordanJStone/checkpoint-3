@@ -1,7 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { valuesService } from "../Services/ListService.js";
 
-
 //Private
 function _draw() {
   let values = ProxyState.values;
@@ -16,28 +15,16 @@ function _draw() {
 }
 
 //Public
-export default class ListController {
+export default class ItemController {
   constructor() {
-    ProxyState.on("lists", _draw);
-    ProxyState.on("items", _draw);
+    ProxyState.on("values", _draw);
     _draw()
   }
 
-  createList() {
-    window.event.preventDefault()
-    let form = window.event.target
-
-    let rawList = {
-      title: form.title.value
-    }
-
-    listService.createList(rawList)
-    form.reset()
+  addValue() {
+    valuesService.addValue()
   }
-
-  deleteList(id) {
-    ListService.deleteList(id)
-  }
-
 
 }
+createItem()
+deleteItem()

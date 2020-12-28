@@ -1,11 +1,11 @@
 import { ProxyState } from "../AppState.js";
-import List from "../Models/List.js";
+import Item from "../Models/Item.js";
 
-class ValuesService {
+
+class ItemService {
   addValue() {
     ProxyState.values = [...ProxyState.values, new Value({ title: Math.random() })]
   }
 }
 
 export const valuesService = new ValuesService();
-

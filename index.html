@@ -17,24 +17,14 @@
         <h1 class="text-center">Task Master</h1>
     </header>
 
-    <main class="container">
-        <div class="row"></div>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newModal">New List</button>
-
-        <div class="row my-3">
-            <div class="card col-md-4">
-                <h5 class="card-header text-center">${this.title}<i type="button" class="fa fa-times btn-danger"
-                        onclick="app.listController.deleteList('$this.id')" aria-hidden="true"></i></h5>
-                <div class="card-body">
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="new item" aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                        <button type="button" class="btn btn-primary">+</button>
-                    </div>
-                </div>
-            </div>
+    <main class="container-fluid">
+        <div class="row">
+            <input type="text" placeholder="List Name...">
+            Color: <input type="color">
+            <button type="button" class="btn btn-primary" onclick="app.ListController.createList()">New List</button>
         </div>
+
+        <div class="row" id="lists"></div>
     </main>
 
 
@@ -47,6 +37,15 @@
     </footer>
 
     <script src="app/main.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
