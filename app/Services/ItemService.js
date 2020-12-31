@@ -17,4 +17,4 @@ class ItemService {
   }
 }
 
-export const itemService = new ItemService();
+export const itemService = new ItemService()

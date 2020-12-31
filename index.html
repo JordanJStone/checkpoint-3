@@ -17,12 +17,38 @@
         <h1 class="text-center">Task Master</h1>
     </header>
 
-    <main class="container-fluid">
+    <main class="container">
         <div class="row">
-            <input type="text" placeholder="List Name...">
-            Color: <input type="color">
-            <button type="button" class="btn btn-primary" onclick="app.ListController.createList()">New List</button>
+            <!-- Modal Button -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#listModal">New List</button>
+
+            <!-- Modal -->
+            <div class="modal" id="listModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">New List</h5>
+                            Color: <input type="color">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form onsubmit="app.listController.createList()" class="col-6">
+                                <div class="form-group">
+                                    <label for="">List Title?</label>
+                                    <input type="text" class="form-control" name="title" id="title"
+                                        placeholder="List title">
+                                    <button class="btn btn-success" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
 
         <div class="row" id="lists"></div>
     </main>

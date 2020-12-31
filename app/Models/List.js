@@ -15,15 +15,14 @@ export default class List {
                         onclick="app.listController.deleteList('${this.id}')" aria-hidden="true"></i></h5>
 
                 <div class="card-body">
-                    <div class="input-group">
-                        <div class="row">${this.Item}</div>
+                <div class="row">${this.Item}</div>
+                    <form onsubmit="app.itemController.createItem('${this.id}')">
                         <div class="row">
                             <input type="text" class="form-control" placeholder="new item" aria-label="Username"
                                 aria-describedby="addon-wrapping">
-                            <button type="button" class="btn btn-primary"
-                                onclick="app.ItemController.createItem('${this.id}')">+</button>
+                            <button class="btn btn-primary" type="submit">+</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         `

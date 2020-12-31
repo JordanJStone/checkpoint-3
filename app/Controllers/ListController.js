@@ -22,11 +22,13 @@ export default class ListController {
     let form = window.event.target
 
     let rawList = {
+      // @ts-ignore
       title: form.title.value
     }
     listService.createList(rawList)
 
-    // form.reset()
+    form.reset()
+    $("#listModal").modal('hide')
   }
 
   deleteList(id) {

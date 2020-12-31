@@ -13,6 +13,7 @@ export default class ItemController {
     }
     itemService.createItem(rawItem)
 
+    form.reset()
   }
 
   delete(itemId) {

@@ -1,8 +1,7 @@
-import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
 export default class Item {
-  constructor({ title, id, listId }) {
+  constructor({ title, listId, id }) {
     this.title = title
     this.id = id || generateId()
     this.listId = listId
