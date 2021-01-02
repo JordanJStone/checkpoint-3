@@ -3,12 +3,11 @@ import { generateId } from "../Utils/GenerateId.js"
 export default class Item {
   constructor({ title, listId, id }) {
     this.title = title
-    this.id = id || generateId()
-    this.listId = listId
+    this.id = id || generateId(),
+      this.listId = listId
   }
 
   get Template() {
-
     return /*html*/`
     <div class="col-6">
     <h5>

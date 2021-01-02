@@ -1,11 +1,11 @@
 import { ProxyState } from "../AppState.js";
 import Item from "../Models/Item.js";
-import { saveState } from "../Utils/LocalStorage.js"
+import { saveState } from "../Utils/LocalStorage.js";
 
 
 class ItemService {
   delete(itemId) {
-    ProxyState.lists = ProxyState.lists.filter(t => t.id != itemId)
+    ProxyState.items = ProxyState.items.filter(t => t.id != itemId)
   }
   createItem(rawItem) {
     let items = ProxyState.items

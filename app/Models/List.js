@@ -15,10 +15,10 @@ export default class List {
                         onclick="app.listController.deleteList('${this.id}')" aria-hidden="true"></i></h5>
 
                 <div class="card-body">
-                <div class="row">${this.Item}</div>
+                <div class="row">${this.Items}</div>
                     <form onsubmit="app.itemController.createItem('${this.id}')">
-                        <div class="row">
-                            <input type="text" class="form-control" placeholder="new item" aria-label="Username"
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="itemTitle" id="itemTitle" placeholder="new item" aria-label="Username"
                                 aria-describedby="addon-wrapping">
                             <button class="btn btn-primary" type="submit">+</button>
                         </div>
@@ -28,7 +28,7 @@ export default class List {
         `
     }
 
-    get Item() {
+    get Items() {
         let template = ""
         let items = ProxyState.items.filter(t => t.listId == this.id)
         items.forEach(t => template += t.Template)
