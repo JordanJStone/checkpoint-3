@@ -35,5 +35,9 @@ export default class ListController {
     listService.deleteList(id)
   }
 
+  colorPicker() {
+    listService.colorPicker()
+  }
+
 
 }

@@ -28,29 +28,29 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">New List</h5>
+                            <input type="color" id="colorSelector">
                         </div>
-                    </div>
 
-                    <div class="modal-body">
-                        <form onsubmit="app.listController.createList()" class="col-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="title" id="title" placeholder="List title"
-                                    minlength="3" maxlength="15" required>
-                                <button class="btn btn-success" type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        <div class="modal-body">
+                            <form onsubmit="app.listController.createList()" class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="title" id="title"
+                                        placeholder="List title" minlength="3" maxlength="15" required>
+                                    <button class="btn btn-success" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
 
 
         <div class="row" id="lists"></div>
-
 
 
     </main>
