@@ -9,6 +9,7 @@ class AppState extends EventEmitter {
 
   /** @type {Item[]} */
   items = []
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {

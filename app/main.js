@@ -10,6 +10,3 @@ class App {
 window["app"] = new App();
 loadState()
 
-function colorSelector() {
-  document.body.style.backgroundColor
-}

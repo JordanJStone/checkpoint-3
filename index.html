@@ -28,25 +28,24 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">New List</h5>
-                            <label for="favcolor">Select your favorite color:</label>
-                            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-                            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                         </div>
-                        <div class="modal-body">
-                            <form onsubmit="app.listController.createList()" class="col-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="title" id="title"
-                                        placeholder="List title">
-                                    <button class="btn btn-success" type="submit">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <form onsubmit="app.listController.createList()" class="col-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="title" id="title" placeholder="List title"
+                                    minlength="3" maxlength="15" required>
+                                <button class="btn btn-success" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
 
@@ -66,7 +65,6 @@
     </footer>
 
     <script src="app/main.js" type="module"></script>
-    <script src="jscolor.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

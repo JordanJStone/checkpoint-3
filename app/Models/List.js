@@ -22,8 +22,7 @@ export default class List {
 
                     <form onsubmit="app.itemController.createItem('${this.id}')" >
                       <div class="form-group">
-                        <input type="text" class="form-control" name="itemTitle" id="itemTitle"
-                            placeholder="New Item">
+                        <input type="text" class="form-control" name="itemTitle" id="itemTitle" placeholder="New Item" minlength="3" maxlength="50" required>
                         <button class="btn btn-success" type="submit">+</button>
                       </div>
                     </form>

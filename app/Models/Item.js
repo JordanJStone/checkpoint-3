@@ -1,10 +1,11 @@
 import { generateId } from "../Utils/GenerateId.js"
 
 export default class Item {
-  constructor({ title, listId, id }) {
+  constructor({ title, listId, id, checkbox }) {
     this.title = title
     this.id = id || generateId(),
       this.listId = listId
+    this.checkbox = checkbox
   }
 
   get Template() {

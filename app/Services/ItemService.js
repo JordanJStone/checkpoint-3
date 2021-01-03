@@ -6,6 +6,7 @@ import { saveState } from "../Utils/LocalStorage.js";
 class ItemService {
   delete(itemId) {
     ProxyState.items = ProxyState.items.filter(t => t.id != itemId)
+    confirm("Are you sure you want to delete this?");
   }
   createItem(rawItem) {
     let items = ProxyState.items

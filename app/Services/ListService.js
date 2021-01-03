@@ -6,6 +6,7 @@ class ListService {
   deleteList(id) {
     ProxyState.lists = ProxyState.lists.filter(p => p.id != id)
     ProxyState.items = ProxyState.items.filter(t => t.listId != id)
+    confirm("Are you sure you want to delete this?");
   }
   createList(rawList) {
     let list = new List(rawList)
