@@ -27,6 +27,7 @@ export default class ListController {
     }
     listService.createList(rawList)
 
+    // @ts-ignore
     form.reset()
     $("#listModal").modal('hide')
   }
@@ -35,9 +36,9 @@ export default class ListController {
     listService.deleteList(id)
   }
 
-  colorPicker() {
-    listService.colorPicker()
-  }
+  // colorPicker() {
+  //   listService.colorPicker()
+  // }
 
 
 }
