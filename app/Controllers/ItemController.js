@@ -24,4 +24,8 @@ export default class ItemController {
   delete(itemId) {
     itemService.delete(itemId)
   }
+
+  // confirmDelete() {
+  //   itemService.confirmDelete()
+  // }
 }

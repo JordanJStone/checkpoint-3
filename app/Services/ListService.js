@@ -3,10 +3,15 @@ import List from "../Models/List.js";
 import { saveState } from "../Utils/LocalStorage.js"
 
 class ListService {
+
   deleteList(id) {
-    ProxyState.lists = ProxyState.lists.filter(p => p.id != id)
-    ProxyState.items = ProxyState.items.filter(t => t.listId != id)
-    confirm("Are you sure you want to delete this?");
+    if (confirm('Confirm deletion?')) {
+
+      ProxyState.lists = ProxyState.lists.filter(p => p.id != id)
+      ProxyState.items = ProxyState.items.filter(t => t.listId != id);
+    }
+
+    // confirm("Are you sure you want to delete this?");
   }
   createList(rawList) {
     let list = new List(rawList)
@@ -17,12 +22,11 @@ class ListService {
     ProxyState.lists = lists
   }
 
-  changeBGColor(id) {
+  // changeBGColor(rawColor) {
 
-
-    // let color = document.getElementById("color").value;
-    // document.body.style.backgroundColor = color;
-  }
+  // let color = document.getElementById("color").value;
+  // document.body.style.backgroundColor = color;
+  // }
 
   constructor() {
     ProxyState.on("lists", saveState)

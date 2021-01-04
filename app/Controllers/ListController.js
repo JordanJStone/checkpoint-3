@@ -21,9 +21,11 @@ export default class ListController {
     window.event.preventDefault()
     let form = window.event.target
 
+
     let rawList = {
       // @ts-ignore
-      title: form.title.value
+      title: form.title.value,
+      color: form.color.value
     }
     listService.createList(rawList)
 
@@ -36,9 +38,15 @@ export default class ListController {
     listService.deleteList(id)
   }
 
-  changeBGColor() {
-    listService.changeBGColor()
-  }
+
+  // changeBGColor() {
+  //   let form = window.event.target
+
+  //   let rawColor = {
+  //     color: form.color.value
+  //   }
+  //   listService.changeBGColor(rawColor)
+  // }
 
 
 }

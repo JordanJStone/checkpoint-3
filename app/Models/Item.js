@@ -5,7 +5,7 @@ export default class Item {
     this.title = title
     this.id = id || generateId(),
       this.listId = listId
-    this.checkbox = checkbox
+    this.checkbox = checkbox || false
   }
 
   get Template() {
