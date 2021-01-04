@@ -14,9 +14,7 @@ class ItemService {
     items.push(new Item(rawItem))
     ProxyState.items = items
   }
-  // confirmDelete() {
-  //   return (confirm ? true : false);
-  // }
+
   constructor() {
     ProxyState.on("items", saveState)
   }

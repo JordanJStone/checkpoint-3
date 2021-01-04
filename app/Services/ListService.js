@@ -22,12 +22,6 @@ class ListService {
     ProxyState.lists = lists
   }
 
-  // changeBGColor(rawColor) {
-
-  // let color = document.getElementById("color").value;
-  // document.body.style.backgroundColor = color;
-  // }
-
   constructor() {
     ProxyState.on("lists", saveState)
   }

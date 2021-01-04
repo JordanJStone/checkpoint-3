@@ -25,12 +25,14 @@ export default class ListController {
     let rawList = {
       // @ts-ignore
       title: form.title.value,
+      // @ts-ignore
       color: form.color.value
     }
     listService.createList(rawList)
 
     // @ts-ignore
     form.reset()
+    // @ts-ignore
     $("#listModal").modal('hide')
   }
 
