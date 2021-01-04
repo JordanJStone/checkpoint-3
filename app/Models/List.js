@@ -2,9 +2,10 @@ import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
 export default class List {
-    constructor({ title, id }) {
+    constructor({ title, id, color }) {
         this.title = title
         this.id = id || generateId()
+        this.color = color
     }
 
     get Template() {
@@ -12,7 +13,7 @@ export default class List {
         return /*html*/`
             <div class="card offset-1 col-3 px-0 my-2 d-flex justify-content-around">
                 <div class="card-body p-0">
-                    <h3 class="card-title">${this.title}<i type="button" class="fa fa-times btn btn-danger"
+                    <h3 class="card-title" style="background-color:${this.color};">${this.title}<i type="button" class="fa fa-times btn btn-danger"
                         onclick="app.listController.deleteList('${this.id}')" aria-hidden="true"></i>
                     </h3>
 

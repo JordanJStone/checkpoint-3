@@ -17,9 +17,12 @@ class ListService {
     ProxyState.lists = lists
   }
 
-  // colorPicker() {
-  //   document.getElementById('colorSelector').style.backgroundColor = 'green', 'blue', 'orange', 'purple', 'brown';
-  // }
+  changeBGColor(id) {
+
+
+    // let color = document.getElementById("color").value;
+    // document.body.style.backgroundColor = color;
+  }
 
   constructor() {
     ProxyState.on("lists", saveState)
