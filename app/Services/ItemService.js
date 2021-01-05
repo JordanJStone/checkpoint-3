@@ -4,6 +4,10 @@ import { saveState } from "../Utils/LocalStorage.js";
 
 
 class ItemService {
+  persistCheckmarks(rawChecks) {
+
+  }
+
   delete(itemId) {
     if (confirm('Confirm deletion?'))
       ProxyState.items = ProxyState.items.filter(t => t.id != itemId)

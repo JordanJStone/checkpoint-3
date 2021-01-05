@@ -25,7 +25,13 @@ export default class ItemController {
     itemService.delete(itemId)
   }
 
-  // confirmDelete() {
-  //   itemService.confirmDelete()
-  // }
+  persistCheckmarks() {
+    let form = window.event.target
+
+    let rawChecks = {
+      checkbox: form.checkbox.value
+    }
+    itemService.persistCheckmarks(rawChecks)
+  }
+
 }
